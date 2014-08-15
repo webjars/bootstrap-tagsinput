@@ -44,6 +44,13 @@
         <upstreamVersion>0.3.9</upstreamVersion>
         <sourceUrl>https://github.com/TimSchlechter/bootstrap-tagsinput/archive</sourceUrl>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
+    
+        <requirejs>
+        {
+        "paths": { "bootstrap-tagsinput": "bootstrap-tagsinput", "bootstrap-tagsinput-min": "bootstrap-tagsinput.min" },
+        "shim": { "bootstrap-tagsinput": [ "bootstrap" ], "bootstrap-tagsinput-min": [ "bootstrap" ] }
+        }
+        </requirejs>
     </properties>
 
     <dependencies>
