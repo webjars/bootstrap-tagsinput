@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>bootstrap-tagsinput</artifactId>
-    <version>0.3.10-SNAPSHOT</version>
+    <version>0.3.9-1-SNAPSHOT</version>
     <name>Bootstrap Tagsinput</name>
     <description>WebJar for Bootstrap Tagsinput</description>
     <url>http://webjars.org</url>
@@ -46,10 +46,16 @@
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     
         <requirejs>
-        {
-        "paths": { "bootstrap-tagsinput": "bootstrap-tagsinput", "bootstrap-tagsinput-min": "bootstrap-tagsinput.min" },
-        "shim": { "bootstrap-tagsinput": [ "bootstrap" ], "bootstrap-tagsinput-min": [ "bootstrap" ] }
-        }
+            {
+                "paths": {
+                    "bootstrap-tagsinput": "bootstrap-tagsinput",
+                    "bootstrap-tagsinput-min": "bootstrap-tagsinput.min"
+                },
+                "shim": {
+                    "bootstrap-tagsinput": [ "bootstrap" ],
+                    "bootstrap-tagsinput-min": [ "bootstrap" ]
+                }
+            }
         </requirejs>
     </properties>
 
@@ -118,12 +124,6 @@
                 </configuration>
             </plugin>
         </plugins>
-        <resources>
-            <resource>
-                <directory>${project.basedir}/src/main/resources</directory>
-                <targetPath>${destDir}</targetPath>
-            </resource>
-        </resources>
     </build>
 
 </project>
