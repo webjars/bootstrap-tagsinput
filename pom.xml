@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>bootstrap-tagsinput</artifactId>
-    <version>0.3.9-2-SNAPSHOT</version>
+    <version>0.5-SNAPSHOT</version>
     <name>Bootstrap Tagsinput</name>
     <description>WebJar for Bootstrap Tagsinput</description>
     <url>http://webjars.org</url>
@@ -41,7 +41,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>0.3.9</upstreamVersion>
+        <upstreamVersion>0.5</upstreamVersion>
         <sourceUrl>https://github.com/TimSchlechter/bootstrap-tagsinput/archive</sourceUrl>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     
@@ -95,11 +95,11 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="unzip archive" />
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
-                                <echo message="moving resources" />
+                                <echo message="unzip archive"/>
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
+                                <echo message="moving resources"/>
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/bootstrap-tagsinput-${upstreamVersion}/dist" />
+                                    <fileset dir="${project.build.directory}/bootstrap-tagsinput-${upstreamVersion}/dist"/>
                                 </move>
                             </target>
                         </configuration>
@@ -109,13 +109,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5</version>
+                <version>2.5.1</version>
             </plugin>
 
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.5.1</version>
+                <version>1.6.5</version>
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>sonatype-nexus-staging</serverId>
