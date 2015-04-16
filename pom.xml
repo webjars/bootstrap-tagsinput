@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>bootstrap-tagsinput</artifactId>
-    <version>0.5-SNAPSHOT</version>
+    <version>0.5</version>
     <name>Bootstrap Tagsinput</name>
     <description>WebJar for Bootstrap Tagsinput</description>
     <url>http://webjars.org</url>
@@ -28,7 +28,7 @@
         <url>http://github.com/webjars/${project.artifactId}</url>
         <connection>scm:git:https://github.com/webjars/${project.artifactId}.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/${project.artifactId}.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>bootstrap-tagsinput-0.5</tag>
     </scm>
 
     <developers>
@@ -95,11 +95,11 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
-                                <echo message="moving resources"/>
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/bootstrap-tagsinput-${upstreamVersion}/dist"/>
+                                    <fileset dir="${project.build.directory}/bootstrap-tagsinput-${upstreamVersion}/dist" />
                                 </move>
                             </target>
                         </configuration>
