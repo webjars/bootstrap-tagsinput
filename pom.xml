@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>bootstrap-tagsinput</artifactId>
-    <version>0.6.2-SNAPSHOT</version>
+    <version>0.8.0-SNAPSHOT</version>
     <name>Bootstrap Tagsinput</name>
     <description>WebJar for Bootstrap Tagsinput</description>
     <url>http://webjars.org</url>
@@ -41,7 +41,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>0.6.1</upstreamVersion>
+        <upstreamVersion>0.8.0</upstreamVersion>
         <sourceUrl>https://github.com/TimSchlechter/bootstrap-tagsinput/archive</sourceUrl>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     
